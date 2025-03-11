@@ -15,9 +15,6 @@ from sklearn.metrics import classification_report
 #Importation du DataFrame
 df = pd.read_csv('MathEdataset.csv',encoding='cp1252',delimiter=";")
 
-import streamlit as st
-
-#from sklearn.model_selection import train_test_split
 st.sidebar.title("Menu")
 st.sidebar.header("Analyse des données")
 #st.sidebar.text("selectionner un des menus suivants pour continuer")
