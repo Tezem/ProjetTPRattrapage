@@ -1,7 +1,7 @@
 # Importation des bibliothèques de base nécessaires
 import streamlit as st
 import pandas as pd
-import seaborn as sns
+#import seaborn as sns
 import numpy as np
 import matplotlib.pyplot as plt
 from sklearn.model_selection import train_test_split
@@ -242,7 +242,7 @@ y_pred = knn.predict(X_test)
 
 # Afficher la matrice de confusion
 conf_matrix = confusion_matrix(y_test, y_pred)
-sns.heatmap(conf_matrix, annot=True, cmap='Blues', fmt='d', xticklabels=df['Type of Answer'].unique(), yticklabels=df['Type of Answer'].unique())
+st.heatmap(conf_matrix, annot=True, cmap='Blues', fmt='d', xticklabels=df['Type of Answer'].unique(), yticklabels=df['Type of Answer'].unique())
 plt.title('Matrice de confusion')
 plt.xlabel('Prédictions')
 plt.ylabel('Vraies classes')
